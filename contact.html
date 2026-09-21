@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="script.js" defer></script>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>North Star Bakery - Contact & Pre-Orders</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
-    <img src="bakery-logo.png" alt="North Star Bakery logo showing a star and wheat stalk">
-    <h1>Contact &amp; Pre-Order Requests</h1>
+    <div>
+      <img src="bakery-logo_c.png" alt="North Star Bakery logo showing a star and wheat stalk">
+      <h1>Contact &amp; Pre-Order Requests</h1>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -29,43 +35,34 @@
 
     <section>
       <h2>Inquiry and Pre-Order Request Form</h2>
-      <form action="#" method="post">
+      <form id="preorder-form" action="#" method="post">
         <fieldset>
           <legend>Contact Information</legend>
-          
+
           <label for="user-name">Full Name:</label>
-          <input type="text" id="user-name" name="user-name" required>
-          <br><br>
+          <input type="text" id="user-name" name="user-name">
 
           <label for="user-email">Email Address:</label>
-          <input type="email" id="user-email" name="user-email" required>
+          <input type="email" id="user-email" name="user-email">
         </fieldset>
 
         <fieldset>
           <legend>Order Details</legend>
 
           <label for="request-type">Request Type:</label>
-          <select id="request-type" name="request-type" required>
+          <select id="request-type" name="request-type">
             <option value="">-- Please Select --</option>
             <option value="preorder">Pre-Order</option>
             <option value="general">General Question</option>
-            <option value="catering">Catering Inquiry</option>
           </select>
-          <br><br>
 
           <label for="pickup-date">Pickup Date:</label>
-          <input type="date" id="pickup-date" name="pickup-date" required>
-          <br><br>
+          <input type="date" id="pickup-date" name="pickup-date">
 
           <label for="item-details">Item Details:</label>
-          <textarea id="item-details" name="item-details" rows="4" cols="40" placeholder="List the baked goods and quantities you would like to order..." required></textarea>
-          <br><br>
-
-          <label for="allergy-notes">Allergy Notes:</label>
-          <textarea id="allergy-notes" name="allergy-notes" rows="3" cols="40" placeholder="Please specify any food allergies (e.g., nut, dairy, gluten)..."></textarea>
+          <textarea id="item-details" name="item-details" rows="4" placeholder="List items requested..."></textarea>
         </fieldset>
 
-        <br>
         <button type="submit">Submit Request</button>
       </form>
     </section>
@@ -75,4 +72,5 @@
     <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
   </footer>
 </body>
+
 </html>
