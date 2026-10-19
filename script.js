@@ -148,6 +148,8 @@ function initFormValidation() {
       isValid = false;
     }
 
+    // TODO: validate request type and item details before sending.
+
     // Block submission if any check fails
     if (!isValid) {
       event.preventDefault();
